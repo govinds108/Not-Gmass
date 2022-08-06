@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Create an Email</title>
+    </head>
+    <body>
+        <h1 class="title">Create your email:</h1>
+
+        <form action="/" request="post">
+            <button class="button settings" style="float: left; margin-left: 10%;" type="submit"><span>Home</span></button>
+        </form>
+        <div id="confirmation">
+
+            <div class="container">
+                <p>This is what you have:                    
+                    <%= JSON.stringify(data) %>
+                    <p>Sender: <%= data.sender[0] %></p>
+                    
+                    <% let recipients = data.recipients %>
+                    <% recipients.forEach(function(current) { %>
+                        <li><%= current %></li>
+                    <% }); %>
+            
+
+                    <br>Send the email?
+                </p>
+            </div>
+
+            <form action="/create" method = "post">
+                <button name="Go Back" id="back-button" class="button settings" style="float:left; margin-left: 10%;" type=submit ><span>Back</span></button>
+            </form>
+            <form action="/submit" method = "post">
+
+                <button type ="submit" name="Send" id="send-button" class="button next" style="float:right; margin-right: 10%;" ><span>Send</span></button>
+
+            </form>
+        </div>
+    </body>
+</html>

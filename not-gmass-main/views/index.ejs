@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Welcome!</title>
+</head>
+<body>
+    
+  <div class="title">
+    <h1>Not GMass</h1>
+  </div>
+
+  <div class="buttons">
+    <form action = "/settings" method="post">
+      <button class="button settings" style="float: left;" type="submit"><span>Settings</span></button>
+    </form>
+    <form action ="/create" method="post">
+      <button class="button next" style="float:right;" type="submit"><span>Create</span></button>
+    </form>
+    
+  </div>
+
+  <div class="container">
+    <ol>
+
+
+        <% emails.forEach(function(currentEmail) { %>
+            <li><%= currentEmail %></li>
+        <% }); %>
+
+    </ol>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Create an Email</title>
+    </head>
+    <body>
+        <h1 class="title">Create your email:</h1>
+
+        <form method="POST" action="/" >
+            <button class="button settings" style="float: left; margin-left: 10%;" type="submit"><span>Home</span></button>
+        </form>
+
+        <div id="csv">
+
+            <div class="container">
+                <form id = "csv-form" action="/create-template" method="POST">
+                    <label for="csv-text">Enter your CSV:</label><br><br>
+                    <textarea id="csv-text" name ="csvtext" rows="10" cols="50"></textarea>
+                    <input type="reset" value="Clear form">
+                
+            </div>
+
+            <button id = "csv-submit" class="button next" style="float:right; margin-right: 10%;" type="submit"><span>Next</span></button>
+
+        </form>
+
+        </div>
+    </body>
+</html>

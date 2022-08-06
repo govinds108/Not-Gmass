@@ -1,0 +1,85 @@
+body {
+    background-color: #BEB9FA;
+    font-family: "Monaco", "Courier New", monospace;
+
+}
+
+.title {
+    text-align: center;
+}
+
+.buttons {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.button {
+    border-radius: 15px;
+    background-color: #77EBF0;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100px;
+}
+
+.settings {
+    border: none;
+    border-radius: 15px;
+}
+
+.settings {
+    font-size: 1em;
+    margin: 0;
+    text-align: center;
+    -webkit-transition: font-size .5s ease;
+    -moz-transition: font-size .5s ease;
+    -o-transition: font-size .5s ease;
+    transition: font-size .5s ease;
+}
+  
+.settings:hover {
+    font-size: 1.5em;
+}
+
+.next span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+.next span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+.next:hover span {
+    padding-right: 25px;
+}
+  
+.next:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.container {
+    width: 78%;
+    height: 60vh;
+    background-color: #77EBF0;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 15px;
+    padding-left: 2%;
+    padding-top: 2%;
+}
+
+#csv-text {
+    width: 500px;
+    height: 250px;
+}
